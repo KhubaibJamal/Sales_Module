@@ -71,6 +71,7 @@ class RecoveryPopUp extends StatelessWidget {
               },
             ),
           ),
+          SizedBox(height: getProportionateScreenWidth(5)),
         ],
       ),
     );
