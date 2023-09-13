@@ -41,10 +41,10 @@ class CustomBottomNavBar extends StatelessWidget {
               ),
             ),
 
-            // about
+            // dealer
             IconButton(
               onPressed: () {
-                // Navigator.pushNamed(context, AboutScreen.routeName);
+                // Navigator.pushNamed(context, DealerScreen.routeName);
               },
               icon: SvgPicture.asset(
                 'assets/icons/dealer list.svg',

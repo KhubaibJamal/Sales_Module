@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../const.dart';
-import '../../../size_config.dart';
+import '../const.dart';
+import '../size_config.dart';
 
 class RemainingOrder extends StatelessWidget {
   const RemainingOrder({super.key});
