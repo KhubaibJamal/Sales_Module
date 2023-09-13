@@ -44,7 +44,6 @@ class RecoveryPopUp extends StatelessWidget {
             width: SizeConfig.screenWidth! * 0.9,
             decoration: BoxDecoration(
               color: const Color(0xFFFFFFFF),
-              // color: Colors.red,
               border: Border.all(width: 1.5, color: kGreyColor),
               borderRadius: BorderRadius.circular(15),
             ),

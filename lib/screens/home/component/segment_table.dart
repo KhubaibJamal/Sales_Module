@@ -79,7 +79,7 @@ class SegmentTable extends StatelessWidget {
                   )
                 ],
               ),
-              // muhammad jamal
+              // Builder
               TableRow(
                 children: [
                   TableCell(
@@ -112,7 +112,7 @@ class SegmentTable extends StatelessWidget {
                   )
                 ],
               ),
-              // Salman Amed
+              // placeholder 3
               TableRow(
                 children: [
                   TableCell(

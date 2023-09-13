@@ -54,16 +54,13 @@ class Chart extends StatelessWidget {
                 ColumnSeries<SalesData, String>(
                   // Data source
                   dataSource: <SalesData>[
-                    SalesData('Jan', 10,
-                        const Color(0xFF8EF592)), // Column color: Red
-                    SalesData('Feb', 15, kGreenColor), // Column color: Blue
-                    SalesData('Mar', 20,
-                        const Color(0xFFF2C7B6)), // Column color: Green
-                    SalesData('Apr', 34, kPrimaryColor), // Column color: Orange
+                    SalesData('Jan', 10, const Color(0xFF8EF592)),
+                    SalesData('Feb', 15, kGreenColor),
+                    SalesData('Mar', 20, const Color(0xFFF2C7B6)),
+                    SalesData('Apr', 34, kPrimaryColor),
                   ],
                   xValueMapper: (SalesData sales, _) => sales.month,
                   yValueMapper: (SalesData sales, _) => sales.sales,
-                  // Bar color mapper
                   pointColorMapper: (SalesData sales, _) => sales.color,
                   width: 1,
                 ),
@@ -75,7 +72,6 @@ class Chart extends StatelessWidget {
             child: Container(
               width: SizeConfig.screenWidth! * 0.9,
               padding: EdgeInsets.all(getProportionateScreenWidth(8)),
-              // height: 65,
               decoration: const BoxDecoration(
                 color: Color(0xFFEDEDED),
                 // color: Colors.red,
@@ -85,7 +81,6 @@ class Chart extends StatelessWidget {
                 ),
               ),
               child: const Column(
-                // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
