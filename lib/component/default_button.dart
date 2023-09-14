@@ -7,12 +7,14 @@ class DefaultButton extends StatelessWidget {
   final Color? backgroundColor;
   final Color textColor;
   final VoidCallback press;
+  final double? borderRadius;
   const DefaultButton({
     super.key,
     required this.text,
     required this.textColor,
     required this.press,
     this.backgroundColor = kPrimaryColor,
+    this.borderRadius = 50,
   });
 
   @override
@@ -24,7 +26,7 @@ class DefaultButton extends StatelessWidget {
         style: TextButton.styleFrom(
           elevation: 5,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(50),
+            borderRadius: BorderRadius.circular(borderRadius!),
           ),
           shadowColor: kPrimaryColor,
           foregroundColor: Colors.white,

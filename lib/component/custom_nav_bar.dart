@@ -1,3 +1,4 @@
+import 'package:agha_steel_sales_module/screens/dealer%20location/dealer_location_screen.dart';
 import 'package:agha_steel_sales_module/screens/support%20ticket/support_ticket_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -78,7 +79,7 @@ class CustomBottomNavBar extends StatelessWidget {
             // dealer location
             IconButton(
               onPressed: () {
-                // Navigator.pushNamed(context, ProfileScreen.routeName);
+                Navigator.pushNamed(context, DealerLocationScreen.routeName);
               },
               icon: SvgPicture.asset(
                 'assets/icons/dealer location.svg',

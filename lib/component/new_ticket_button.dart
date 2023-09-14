@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../const.dart';
-import '../../../size_config.dart';
+import '../const.dart';
+import '../size_config.dart';
 
-class NewTicketButton extends StatelessWidget {
-  const NewTicketButton({
+class DefaultButtonWithIcon extends StatelessWidget {
+  final String text, icon;
+  const DefaultButtonWithIcon({
     super.key,
+    required this.text,
+    required this.icon,
   });
 
   @override
@@ -25,10 +28,10 @@ class NewTicketButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset('assets/icons/new ticket icon.svg'),
+            SvgPicture.asset(icon),
             const SizedBox(width: 10),
             Text(
-              "New Ticket",
+              text,
               style: TextStyle(
                 fontSize: getProportionateScreenWidth(18),
                 color: Colors.white,
