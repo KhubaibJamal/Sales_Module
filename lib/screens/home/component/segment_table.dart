@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../const.dart';
 import '../../../size_config.dart';
-import 'detail_text.dart';
+import '../../../component/detail_text.dart';
 
 class SegmentTable extends StatelessWidget {
   const SegmentTable({super.key});

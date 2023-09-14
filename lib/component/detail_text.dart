@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../const.dart';
-import '../../../size_config.dart';
+import '../const.dart';
+import '../size_config.dart';
 
 class DetailText extends StatelessWidget {
   final String title, subTitle;

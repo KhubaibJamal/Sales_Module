@@ -1,18 +1,20 @@
-import 'package:agha_steel_sales_module/const.dart';
-import 'package:agha_steel_sales_module/component/recovery_pop_up.dart';
-import 'package:agha_steel_sales_module/size_config.dart';
 import 'package:flutter/material.dart';
 
 import '../../../component/detail_text.dart';
+import '../../../component/recovery_pop_up.dart';
+import '../../../const.dart';
+import '../../../size_config.dart';
 
-class CustomerTable extends StatelessWidget {
-  const CustomerTable({super.key});
+class DealersTable extends StatelessWidget {
+  const DealersTable({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        //dealers and details
+        //segment detail
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -47,7 +49,7 @@ class CustomerTable extends StatelessWidget {
             },
             border: TableBorder.all(color: kGreyColor),
             children: [
-              // ejaz
+              // ejaz ahmed
               TableRow(
                 children: [
                   TableCell(
@@ -80,40 +82,8 @@ class CustomerTable extends StatelessWidget {
                   )
                 ],
               ),
-              // muhammad jamal
-              TableRow(
-                children: [
-                  TableCell(
-                    verticalAlignment: TableCellVerticalAlignment.middle,
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: Text("Muhamamd Jamal Khan", style: headingStyle),
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 5, bottom: 5, left: 5),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        DetailText(
-                            title: "Collection Plan PKR", subTitle: "500,000"),
-                        DetailText(
-                          title: "Achieve Plan PKR",
-                          subTitle: "500,000",
-                          textColor: kGreenColor,
-                        ),
-                        DetailText(title: "Target MTN", subTitle: "50"),
-                        DetailText(
-                          title: "Achieve MTN",
-                          subTitle: "59.50",
-                          textColor: kPrimaryColor,
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-              // Salman Amed
+
+              // salman ahmed
               TableRow(
                 children: [
                   TableCell(
@@ -154,6 +124,146 @@ class CustomerTable extends StatelessWidget {
                           ),
                         ],
                       ),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 5, bottom: 5, left: 5),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        DetailText(
+                            title: "Collection Plan PKR", subTitle: "500,000"),
+                        DetailText(
+                          title: "Achieve Plan PKR",
+                          subTitle: "500,000",
+                          textColor: kGreenColor,
+                        ),
+                        DetailText(title: "Target MTN", subTitle: "50"),
+                        DetailText(
+                          title: "Achieve MTN",
+                          subTitle: "59.50",
+                          textColor: kPrimaryColor,
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+
+              // muhammad jamal khan
+              TableRow(
+                children: [
+                  TableCell(
+                    verticalAlignment: TableCellVerticalAlignment.middle,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Text("Muhammad Jamal Khan", style: headingStyle),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 5, bottom: 5, left: 5),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        DetailText(
+                          title: "Collection Plan PKR",
+                          subTitle: "500,000",
+                        ),
+                        DetailText(
+                          title: "Achieve Plan PKR",
+                          subTitle: "500,000",
+                          textColor: kGreenColor,
+                        ),
+                        DetailText(title: "Target MTN", subTitle: "50"),
+                        DetailText(
+                          title: "Achieve MTN",
+                          subTitle: "59.50",
+                          textColor: kPrimaryColor,
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+
+              // jameel
+              TableRow(
+                children: [
+                  TableCell(
+                    verticalAlignment: TableCellVerticalAlignment.middle,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Column(
+                        // crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Jameel", style: headingStyle),
+                          const SizedBox(height: 5),
+                          GestureDetector(
+                            onTap: () {
+                              // pop up
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return const RecoveryPopUp();
+                                },
+                              );
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(5),
+                              width: 70,
+                              height: 30,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFFF6252),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "overdue",
+                                  style: subHeading.copyWith(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 5, bottom: 5, left: 5),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        DetailText(
+                          title: "Collection Plan PKR",
+                          subTitle: "500,000",
+                        ),
+                        DetailText(
+                          title: "Achieve Plan PKR",
+                          subTitle: "500,000",
+                          textColor: kGreenColor,
+                        ),
+                        DetailText(title: "Target MTN", subTitle: "50"),
+                        DetailText(
+                          title: "Achieve MTN",
+                          subTitle: "59.50",
+                          textColor: kPrimaryColor,
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+
+              // salman
+              TableRow(
+                children: [
+                  TableCell(
+                    verticalAlignment: TableCellVerticalAlignment.middle,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Text("Salman", style: headingStyle),
                     ),
                   ),
                   const Padding(

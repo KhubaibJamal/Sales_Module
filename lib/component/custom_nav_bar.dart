@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../const.dart';
 import '../enum.dart';
+import '../screens/dealer/dealer_screen.dart';
 import '../screens/home/home_screen.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
@@ -44,7 +45,7 @@ class CustomBottomNavBar extends StatelessWidget {
             // dealer
             IconButton(
               onPressed: () {
-                // Navigator.pushNamed(context, DealerScreen.routeName);
+                Navigator.pushNamed(context, DealerScreen.routeName);
               },
               icon: SvgPicture.asset(
                 'assets/icons/dealer list.svg',

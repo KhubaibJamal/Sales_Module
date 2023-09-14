@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../component/default_button.dart';
-import '../../../const.dart';
-import '../../../size_config.dart';
+import 'default_button.dart';
+import '../const.dart';
+import '../size_config.dart';
 
 class RecoveryPopUp extends StatelessWidget {
   const RecoveryPopUp({
