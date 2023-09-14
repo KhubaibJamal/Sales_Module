@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../const.dart';
-import '../../../size_config.dart';
 
 class DealerText extends StatelessWidget {
   const DealerText({
@@ -14,13 +13,7 @@ class DealerText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Spacer(flex: 2),
-        Text(
-          "Dealers List",
-          style: headingStyle.copyWith(
-            fontWeight: FontWeight.bold,
-            fontSize: getProportionateScreenWidth(20),
-          ),
-        ),
+        Text("Dealers List", style: pageHeading),
         const Spacer(),
         const CircleAvatar(
           radius: 30,

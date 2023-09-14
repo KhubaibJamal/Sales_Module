@@ -1,3 +1,4 @@
+import 'package:agha_steel_sales_module/screens/support%20ticket/support_ticket_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -61,7 +62,7 @@ class CustomBottomNavBar extends StatelessWidget {
             // support ticket
             IconButton(
               onPressed: () {
-                // Navigator.pushNamed(context, SettingScreen.routeName);
+                Navigator.pushNamed(context, SupportTicketScreen.routeName);
               },
               icon: SvgPicture.asset(
                 'assets/icons/support ticket.svg',

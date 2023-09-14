@@ -12,7 +12,6 @@ class Body extends StatelessWidget {
     return SafeArea(
       child: SingleChildScrollView(
         child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Center(child: Image.asset('assets/images/upper logo.png')),
 

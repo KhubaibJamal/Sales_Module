@@ -10,6 +10,7 @@ const kRedColor = Color(0xFFD70101);
 const kGreyColor = Color(0xFFA29C9C);
 const kYellowColor = Color(0xFFFABF35);
 const kBlueColor = Color(0xFF09244B);
+const kScaffoldBgColor = Color(0xFFE9E9E9);
 
 final headingStyle = TextStyle(
   fontSize: getProportionateScreenWidth(15),
@@ -21,6 +22,18 @@ final subHeading = TextStyle(
   fontSize: getProportionateScreenWidth(18),
   fontWeight: FontWeight.w600,
 );
+
+final pageHeading = TextStyle(
+  fontSize: getProportionateScreenWidth(20),
+  color: kTextColor,
+  fontWeight: FontWeight.bold,
+);
+
+final greyTextStyle = TextStyle(
+  color: const Color(0xFF868782),
+  fontSize: getProportionateScreenWidth(18),
+);
+
 
 // final otpInputDecoration = InputDecoration(
 //   contentPadding: const EdgeInsets.symmetric(
