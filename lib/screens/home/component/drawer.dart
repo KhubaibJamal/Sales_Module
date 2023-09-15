@@ -1,3 +1,4 @@
+import 'package:agha_steel_sales_module/screens/remaining%20order/remaining_order_screen.dart';
 import 'package:agha_steel_sales_module/screens/visit%20history/visit_history_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -86,8 +87,8 @@ class HomeDrawer extends StatelessWidget {
                 // Remaining Order
                 ListTile(
                   onTap: () {
-                    // Navigator.pushNamed(
-                    //     context, ScheduledOrderScreen.routeName);
+                    Navigator.pushNamed(
+                        context, RemainingOrderScreen.routeName);
                   },
                   title: Text(
                     "Remaining orders",
