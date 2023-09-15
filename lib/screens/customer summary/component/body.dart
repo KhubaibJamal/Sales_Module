@@ -1,7 +1,7 @@
 import 'package:agha_steel_sales_module/component/page_header.dart';
+import 'package:agha_steel_sales_module/screens/customer%20summary/component/customer_summary_rable.dart';
 import 'package:flutter/material.dart';
 import '../../../size_config.dart';
-import 'order_table.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -20,14 +20,10 @@ class Body extends StatelessWidget {
               Center(child: Image.asset('assets/images/upper logo.png')),
 
               // page header
-              const PageHeader(
-                title: "Remaining orders",
-              ),
+              const PageHeader(title: "Customer summary"),
 
-              // customer table
-              SizedBox(height: getProportionateScreenWidth(10)),
-              const OrderTable(),
-              SizedBox(height: getProportionateScreenWidth(15)),
+              // customer summary table
+              const CustomerSummaryTable(),
             ],
           ),
         ),

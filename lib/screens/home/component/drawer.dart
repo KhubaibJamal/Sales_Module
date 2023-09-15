@@ -1,3 +1,4 @@
+import 'package:agha_steel_sales_module/screens/customer%20summary/customer_summary_screen.dart';
 import 'package:agha_steel_sales_module/screens/remaining%20order/remaining_order_screen.dart';
 import 'package:agha_steel_sales_module/screens/visit%20history/visit_history_screen.dart';
 import 'package:flutter/material.dart';
@@ -104,7 +105,8 @@ class HomeDrawer extends StatelessWidget {
                 // Customer Summary
                 ListTile(
                   onTap: () {
-                    // Navigator.pushNamed(context, ComplaintsScreen.routeName);
+                    Navigator.pushNamed(
+                        context, CustomerSummaryScreen.routeName);
                   },
                   title: Text(
                     "Customer Summary",

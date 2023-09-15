@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../component/icon_container.dart';
-import '../../../const.dart';
+import 'icon_container.dart';
+import '../const.dart';
 
 class PageHeader extends StatelessWidget {
+  final String title;
   const PageHeader({
     super.key,
+    required this.title,
   });
 
   @override
@@ -16,7 +18,7 @@ class PageHeader extends StatelessWidget {
         const IconContainer(),
         const SizedBox(width: 8),
         Text(
-          "Remaining orders",
+          title,
           style: pageHeading.copyWith(color: kPrimaryColor),
         ),
         const CircleAvatar(

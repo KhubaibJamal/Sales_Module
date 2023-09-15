@@ -13,7 +13,7 @@ class OrderTable extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             offset: Offset(0, 0),
             blurRadius: 20,
