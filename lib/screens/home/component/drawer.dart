@@ -138,11 +138,11 @@ class HomeDrawer extends StatelessWidget {
                 // report
                 ListTile(
                   onTap: () {
-                    // showDialog(
-                    //     context: context,
-                    //     builder: (context) {
-                    //       return reportDialogBox(context);
-                    //     });
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return reportDialogBox(context);
+                        });
                   },
                   title: Text(
                     "Report",
@@ -193,57 +193,62 @@ class HomeDrawer extends StatelessWidget {
     );
   }
 
-  // AlertDialog reportDialogBox(BuildContext context) {
-  //   return AlertDialog(
-  //     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-  //     title: Row(
-  //       children: [
-  //         SvgPicture.asset('assets/icons/report2  icon.svg'),
-  //         const SizedBox(width: 10),
-  //         Text("Report", style: subHeading),
-  //         const Spacer(),
-  //         IconButton(
-  //           onPressed: () {
-  //             Navigator.pop(context);
-  //           },
-  //           icon: const Icon(Icons.close),
-  //         ),
-  //       ],
-  //     ),
-  //     content: Column(
-  //       mainAxisSize: MainAxisSize.min,
-  //       children: [
-  //         Container(
-  //           padding: EdgeInsets.all(getProportionateScreenWidth(15)),
-  //           height: SizeConfig.screenHeight! / 3.5,
-  //           width: SizeConfig.screenWidth! * 0.9,
-  //           decoration: BoxDecoration(
-  //             color: const Color(0xFFFFFFFF),
-  //             // color: Colors.red,
-  //             border: Border.all(width: 1.5, color: kGreyColor),
-  //             borderRadius: BorderRadius.circular(15),
-  //           ),
-  //           child: TextField(
-  //             maxLines: 3,
-  //             style: subHeading.copyWith(
-  //                 fontSize: getProportionateScreenWidth(17)),
-  //             decoration: const InputDecoration(
-  //               hintText: "Add your concerns",
-  //               border: InputBorder.none,
-  //             ),
-  //           ),
-  //         ),
-  //         const SizedBox(height: 10),
-  //         DefaultButton(
-  //           text: "Submit",
-  //           textColor: Colors.white,
-  //           backgroundColor: kPrimaryColor,
-  //           press: () {},
-  //         ),
-  //       ],
-  //     ),
-  //   );
-  // }
+  AlertDialog reportDialogBox(BuildContext context) {
+    return AlertDialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+        side: const BorderSide(
+          color: kPrimaryColor,
+          width: 1.5,
+        ),
+      ),
+      title: Row(
+        children: [
+          SvgPicture.asset('assets/icons/report2  icon.svg'),
+          const SizedBox(width: 10),
+          Text("Report", style: subHeading),
+          const Spacer(),
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.close),
+          ),
+        ],
+      ),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            padding: EdgeInsets.all(getProportionateScreenWidth(15)),
+            height: SizeConfig.screenHeight! / 3.5,
+            width: SizeConfig.screenWidth! * 0.9,
+            decoration: BoxDecoration(
+              color: const Color(0xFFFFFFFF),
+              border: Border.all(width: 1.5, color: kGreyColor),
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: TextField(
+              maxLines: 3,
+              style: subHeading.copyWith(
+                  fontSize: getProportionateScreenWidth(17)),
+              decoration: const InputDecoration(
+                hintText: "Add your concerns",
+                border: InputBorder.none,
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
+          DefaultButton(
+            text: "Submit",
+            textColor: Colors.white,
+            backgroundColor: kPrimaryColor,
+            press: () {},
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class UserInfo extends StatelessWidget {
