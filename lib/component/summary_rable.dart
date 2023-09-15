@@ -2,10 +2,10 @@ import 'package:agha_steel_sales_module/const.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../size_config.dart';
+import '../size_config.dart';
 
-class CustomerSummaryTable extends StatelessWidget {
-  const CustomerSummaryTable({super.key});
+class SummaryTable extends StatelessWidget {
+  const SummaryTable({super.key});
 
   @override
   Widget build(BuildContext context) {

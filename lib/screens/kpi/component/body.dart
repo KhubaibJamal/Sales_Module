@@ -1,6 +1,7 @@
-import 'package:agha_steel_sales_module/component/page_header.dart';
-import 'package:agha_steel_sales_module/component/summary_rable.dart';
 import 'package:flutter/material.dart';
+
+import '../../../component/summary_rable.dart';
+import '../../../component/page_header.dart';
 import '../../../size_config.dart';
 
 class Body extends StatelessWidget {
@@ -20,7 +21,7 @@ class Body extends StatelessWidget {
               Center(child: Image.asset('assets/images/upper logo.png')),
 
               // page header
-              const PageHeader(title: "Customer summary"),
+              const PageHeader(title: "Seller Summary"),
 
               // customer summary table
               const SummaryTable(),
