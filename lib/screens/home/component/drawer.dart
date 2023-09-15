@@ -1,3 +1,4 @@
+import 'package:agha_steel_sales_module/screens/visit%20history/visit_history_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../component/default_button.dart';
@@ -53,8 +54,7 @@ class HomeDrawer extends StatelessWidget {
                 // visit history
                 ListTile(
                   onTap: () {
-                    // Navigator.pushNamed(
-                    //     context, AccountHistoryScreen.routeName);
+                    Navigator.pushNamed(context, VisitHistoryScreen.routeName);
                   },
                   title: Text(
                     "Visit History",

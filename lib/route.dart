@@ -3,6 +3,7 @@ import 'package:agha_steel_sales_module/screens/dealer%20location/dealer_locatio
 import 'package:agha_steel_sales_module/screens/dealer/dealer_screen.dart';
 import 'package:agha_steel_sales_module/screens/home/home_screen.dart';
 import 'package:agha_steel_sales_module/screens/support%20ticket/support_ticket_screen.dart';
+import 'package:agha_steel_sales_module/screens/visit%20history/visit_history_screen.dart';
 import 'package:agha_steel_sales_module/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,4 +14,5 @@ final Map<String, WidgetBuilder> routes = {
   DealerScreen.routeName: (context) => const DealerScreen(),
   SupportTicketScreen.routeName: (context) => const SupportTicketScreen(),
   DealerLocationScreen.routeName: (context) => const DealerLocationScreen(),
+  VisitHistoryScreen.routeName: (context) => const VisitHistoryScreen(),
 };
