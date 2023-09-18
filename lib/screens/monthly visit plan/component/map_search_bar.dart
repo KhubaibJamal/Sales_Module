@@ -1,4 +1,5 @@
 import 'package:agha_steel_sales_module/const.dart';
+import 'package:agha_steel_sales_module/screens/monthly%20visit%20plan/component/dealer_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 import '../../../size_config.dart';
@@ -77,14 +78,7 @@ class MapSearchBar extends StatelessWidget {
                         // jameel ahmed
                         ListTile(
                           onTap: () {
-                            showModalBottomSheet(
-                              context: context,
-                              builder: (context) {
-                                return Column(
-                                  children: [],
-                                );
-                              },
-                            );
+                            dealerBottomSheet(context);
                           },
                           leading:
                               Image.asset('assets/images/jameel ahmed.png'),
@@ -116,6 +110,17 @@ class MapSearchBar extends StatelessWidget {
             ),
           ),
         );
+      },
+    );
+  }
+
+  Future<dynamic> dealerBottomSheet(BuildContext context) {
+    return showModalBottomSheet(
+      backgroundColor: kScaffoldBgColor,
+      isScrollControlled: true,
+      context: context,
+      builder: (context) {
+        return const DealerBottomSheet();
       },
     );
   }

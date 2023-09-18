@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../component/new_ticket_button.dart';
+import '../../../component/icon_button.dart';
 import '../../../const.dart';
 import '../../../size_config.dart';
 
