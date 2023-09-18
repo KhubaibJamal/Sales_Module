@@ -1,5 +1,6 @@
 import 'package:agha_steel_sales_module/screens/customer%20summary/customer_summary_screen.dart';
 import 'package:agha_steel_sales_module/screens/kpi/kpi_screen.dart';
+import 'package:agha_steel_sales_module/screens/monthly%20visit%20plan/monthly_visit_plan_screen.dart';
 import 'package:agha_steel_sales_module/screens/remaining%20order/remaining_order_screen.dart';
 import 'package:agha_steel_sales_module/screens/visit%20history/visit_history_screen.dart';
 import 'package:flutter/material.dart';
@@ -73,7 +74,7 @@ class HomeDrawer extends StatelessWidget {
                 // Monthly visit plan
                 ListTile(
                   onTap: () {
-                    // Navigator.pushNamed(context, OrderHistoryScreen.routeName);
+                    Navigator.pushNamed(context, MonthlyVisitScreen.routeName);
                   },
                   title: Text(
                     "Monthly Visit Plan",
