@@ -1,6 +1,7 @@
 import 'package:agha_steel_sales_module/const.dart';
 import 'package:agha_steel_sales_module/screens/support%20ticket/component/ticket_box.dart';
 import 'package:agha_steel_sales_module/screens/support%20ticket/component/ticket_detail.dart';
+import 'package:agha_steel_sales_module/screens/support%20ticket/new%20ticket/new_ticket_screen.dart';
 import 'package:agha_steel_sales_module/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,9 @@ class Body extends StatelessWidget {
               DefaultButtonWithIcon(
                 text: "New Ticket",
                 icon: 'assets/icons/new ticket icon.svg',
-                press: () {},
+                press: () {
+                  Navigator.pushNamed(context, NewTicketScreen.routeName);
+                },
               ),
 
               // ticket grid

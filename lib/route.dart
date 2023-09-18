@@ -7,6 +7,7 @@ import 'package:agha_steel_sales_module/screens/kpi/kpi_screen.dart';
 import 'package:agha_steel_sales_module/screens/monthly%20visit%20plan/monthly_visit_plan_screen.dart';
 import 'package:agha_steel_sales_module/screens/profile/profile_screen.dart';
 import 'package:agha_steel_sales_module/screens/remaining%20order/remaining_order_screen.dart';
+import 'package:agha_steel_sales_module/screens/support%20ticket/new%20ticket/new_ticket_screen.dart';
 import 'package:agha_steel_sales_module/screens/support%20ticket/support_ticket_screen.dart';
 import 'package:agha_steel_sales_module/screens/visit%20history/visit_history_screen.dart';
 import 'package:agha_steel_sales_module/screens/welcome/welcome_screen.dart';
@@ -25,4 +26,5 @@ final Map<String, WidgetBuilder> routes = {
   CustomerSummaryScreen.routeName: (context) => const CustomerSummaryScreen(),
   KpiScreen.routeName: (context) => const KpiScreen(),
   ProfileScreen.routeName: (context) => const ProfileScreen(),
+  NewTicketScreen.routeName: (context) => const NewTicketScreen(),
 };

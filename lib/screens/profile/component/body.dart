@@ -2,6 +2,7 @@ import 'package:agha_steel_sales_module/component/icon_button.dart';
 import 'package:agha_steel_sales_module/component/icon_container.dart';
 import 'package:agha_steel_sales_module/screens/profile/component/profile_image.dart';
 import 'package:agha_steel_sales_module/screens/profile/component/profile_menu.dart';
+import 'package:agha_steel_sales_module/screens/visit%20history/visit_history_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../const.dart';
@@ -20,7 +21,11 @@ class Body extends StatelessWidget {
           child: Column(
             children: [
               Center(child: Image.asset('assets/images/upper logo.png')),
-              AppBar(leading: const IconContainer()),
+              AppBar(
+                backgroundColor: Colors.transparent,
+                leading: const IconContainer(),
+                title: Text(""),
+              ),
               const ProfileImage(),
               Text(
                 'Kamal',
@@ -38,7 +43,9 @@ class Body extends StatelessWidget {
               DefaultButtonWithIcon(
                 text: "Past Visits",
                 icon: 'assets/icons/past visit icon.svg',
-                press: () {},
+                press: () {
+                  Navigator.pushNamed(context, VisitHistoryScreen.routeName);
+                },
               ),
 
               SizedBox(height: getProportionateScreenWidth(10)),
