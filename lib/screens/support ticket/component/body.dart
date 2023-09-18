@@ -26,9 +26,10 @@ class Body extends StatelessWidget {
 
               // new ticket button
               SizedBox(height: getProportionateScreenWidth(10)),
-              const DefaultButtonWithIcon(
+              DefaultButtonWithIcon(
                 text: "New Ticket",
                 icon: 'assets/icons/new ticket icon.svg',
+                press: () {},
               ),
 
               // ticket grid

@@ -6,18 +6,18 @@ import '../size_config.dart';
 
 class DefaultButtonWithIcon extends StatelessWidget {
   final String text, icon;
+  final VoidCallback press;
   const DefaultButtonWithIcon({
     super.key,
     required this.text,
     required this.icon,
+    required this.press,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        // calling screen
-      },
+      onTap: press,
       child: Ink(
         padding: EdgeInsets.all(getProportionateScreenWidth(12)),
         width: SizeConfig.screenWidth! * 0.9,

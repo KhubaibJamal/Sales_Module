@@ -1,3 +1,4 @@
+import 'package:agha_steel_sales_module/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -37,13 +38,18 @@ class AppBarWidgetList extends StatelessWidget {
               color: kPrimaryColor,
             ),
           ),
-          Container(
-            height: 75,
-            width: 75,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  'assets/images/profile.png',
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, ProfileScreen.routeName);
+            },
+            child: Container(
+              height: 75,
+              width: 75,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    'assets/images/profile.png',
+                  ),
                 ),
               ),
             ),

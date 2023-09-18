@@ -238,9 +238,10 @@ class DealerButton extends StatelessWidget {
       children: [
         SizedBox(
           width: SizeConfig.screenWidth! * 0.7,
-          child: const DefaultButtonWithIcon(
+          child: DefaultButtonWithIcon(
             text: "7 minutes",
             icon: 'assets/icons/car icon.svg',
+            press: () {},
           ),
         ),
         const Spacer(),

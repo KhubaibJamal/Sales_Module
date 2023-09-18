@@ -26,9 +26,10 @@ class MapLocation extends StatelessWidget {
         ),
         SizedBox(
           width: SizeConfig.screenWidth! * 0.8,
-          child: const DefaultButtonWithIcon(
+          child: DefaultButtonWithIcon(
             text: "Get Location",
             icon: 'assets/icons/location icon.svg',
+            press: () {},
           ),
         )
       ],
