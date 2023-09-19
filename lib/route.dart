@@ -1,4 +1,5 @@
 import 'package:agha_steel_sales_module/screens/auth/auth_screen.dart';
+import 'package:agha_steel_sales_module/screens/customer%20data/customer_data_screen.dart';
 import 'package:agha_steel_sales_module/screens/customer%20summary/customer_summary_screen.dart';
 import 'package:agha_steel_sales_module/screens/dealer%20location/dealer_location_screen.dart';
 import 'package:agha_steel_sales_module/screens/dealer/dealer_screen.dart';
@@ -29,4 +30,5 @@ final Map<String, WidgetBuilder> routes = {
   ProfileScreen.routeName: (context) => const ProfileScreen(),
   NewTicketScreen.routeName: (context) => const NewTicketScreen(),
   VisitDetailScreen.routeName: (context) => const VisitDetailScreen(),
+  CustomerDataScreen.routeName: (context) => const CustomerDataScreen(),
 };
