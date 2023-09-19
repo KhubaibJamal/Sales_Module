@@ -1,5 +1,6 @@
 import 'package:agha_steel_sales_module/const.dart';
 import 'package:agha_steel_sales_module/screens/account%20history/account_history_screen.dart';
+import 'package:agha_steel_sales_module/screens/order%20history/order_history.dart';
 import 'package:agha_steel_sales_module/screens/visit%20history/visit_history_screen.dart';
 import 'package:agha_steel_sales_module/size_config.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,9 @@ class OrderDetails extends StatelessWidget {
         HistoryTile(
           title: "Orders History",
           icon: 'assets/icons/order history.svg',
-          press: () {},
+          press: () {
+            Navigator.pushNamed(context, OrderHistory.routeName);
+          },
         ),
         SizedBox(height: getProportionateScreenWidth(20)),
         HistoryTile(
