@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../component/dealer_details.dart';
+import '../../../component/dealer_time_box.dart';
 import '../../../component/icon_button.dart';
 import '../../../const.dart';
 import '../../../size_config.dart';
@@ -31,9 +33,9 @@ class DealerBottomSheet extends StatelessWidget {
                   // button
                   const DealerButton(),
 
-                  // hours
+                  // DealerTimeBox
                   SizedBox(height: getProportionateScreenWidth(18)),
-                  const Hours(),
+                  const DealerTimeBox(),
 
                   // details
                   SizedBox(height: getProportionateScreenWidth(18)),
@@ -119,106 +121,6 @@ class IconTextContainer extends StatelessWidget {
             text,
             style: subHeading.copyWith(
               color: kPrimaryColor,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class DealerDetails extends StatelessWidget {
-  const DealerDetails({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(getProportionateScreenWidth(10)),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text("Phone", style: greyTextStyle),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "+92 (300) 327-10-45",
-                style: subHeading.copyWith(color: kPrimaryColor),
-              ),
-              GestureDetector(
-                onTap: () {
-                  // navigate to dealer location
-                },
-                child: Container(
-                  width: 50,
-                  height: 30,
-                  decoration: const BoxDecoration(
-                    color: kPrimaryColor,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Edit",
-                      style: subHeading.copyWith(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const Divider(thickness: 1.0, color: kGreyColor),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("Address", style: greyTextStyle),
-              SvgPicture.asset('assets/icons/dealer address.svg'),
-            ],
-          ),
-          Text(
-            "Gulshan-e-Iqbal\nblock-5\nKarachi\n74000",
-            style: subHeading,
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Hours extends StatelessWidget {
-  const Hours({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(getProportionateScreenWidth(10)),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text("Hours", style: greyTextStyle),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("09:00 - 18:00", style: subHeading),
-              const Icon(Icons.arrow_drop_down_sharp, color: kGreyColor),
-            ],
-          ),
-          Text(
-            "Closed",
-            style: greyTextStyle.copyWith(
-              color: const Color(0xFFDF563F),
             ),
           ),
         ],

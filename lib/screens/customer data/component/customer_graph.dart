@@ -15,7 +15,7 @@ class CustomerGraph extends StatelessWidget {
       children: [
         Container(
           width: SizeConfig.screenWidth! * 0.9,
-          height: 420,
+          height: 422,
           padding: EdgeInsets.all(getProportionateScreenWidth(8)),
           decoration: const BoxDecoration(
             color: kPrimaryColor,

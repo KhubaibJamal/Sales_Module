@@ -12,9 +12,7 @@ class MapLocation extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.all(getProportionateScreenWidth(15)),
           width: SizeConfig.screenWidth! * 0.8,
-          height: 150,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: const BorderRadius.only(
@@ -22,6 +20,10 @@ class MapLocation extends StatelessWidget {
               topRight: Radius.circular(15),
             ),
             border: Border.all(color: kGreyColor, width: 1.5),
+          ),
+          child: Image.asset(
+            'assets/images/location.png',
+            fit: BoxFit.contain,
           ),
         ),
         SizedBox(
