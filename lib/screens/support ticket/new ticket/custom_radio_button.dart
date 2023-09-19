@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../component/default_button.dart';
+import '../../../component/feedback_box.dart';
 import '../../../const.dart';
 import '../../../size_config.dart';
 
@@ -103,7 +104,7 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
 
         //  feedback text
         SizedBox(height: getProportionateScreenWidth(20)),
-        const FeedbackBox(),
+        const FeedbackBox(text: "Message"),
 
         // submit button
         SizedBox(height: getProportionateScreenWidth(18)),
@@ -156,35 +157,6 @@ class _FeedbackContainerState extends State<FeedbackContainer> {
               color: Colors.white,
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class FeedbackBox extends StatelessWidget {
-  const FeedbackBox({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(getProportionateScreenWidth(15)),
-      height: SizeConfig.screenHeight! / 3.5,
-      width: SizeConfig.screenWidth! * 0.9,
-      decoration: BoxDecoration(
-        color: const Color(0xFFFFFFFF),
-        // color: Colors.red,
-        border: Border.all(width: 1.5, color: kGreyColor),
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: TextField(
-        maxLines: 3,
-        style: subHeading.copyWith(fontSize: getProportionateScreenWidth(17)),
-        decoration: const InputDecoration(
-          hintText: "Message",
-          border: InputBorder.none,
         ),
       ),
     );
