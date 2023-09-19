@@ -54,7 +54,7 @@ class Body extends StatelessWidget {
               SizedBox(height: getProportionateScreenWidth(20)),
               const CustomerLocation(),
 
-              SizedBox(height: getProportionateScreenWidth(25)),
+              SizedBox(height: getProportionateScreenWidth(50)),
             ],
           ),
         ),
