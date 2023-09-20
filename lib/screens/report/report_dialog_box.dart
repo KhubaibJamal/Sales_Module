@@ -85,7 +85,7 @@ class _ReportDialogBoxState extends State<ReportDialogBox> {
                       //       right: getProportionateScreenWidth(10),
                       //       bottom: SizeConfig.screenHeight! - 150,
                       //     ),
-                      //   ),
+                      // ),
                       // );
                     },
                   ),
