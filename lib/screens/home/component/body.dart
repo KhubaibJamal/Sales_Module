@@ -1,4 +1,5 @@
 import 'package:agha_steel_sales_module/const.dart';
+import 'package:agha_steel_sales_module/screens/dealer/dealer_screen.dart';
 import 'package:agha_steel_sales_module/screens/home/component/chart.dart';
 import 'package:agha_steel_sales_module/screens/home/component/home_heading.dart';
 import 'package:agha_steel_sales_module/screens/home/component/rating_bar_comment.dart';
@@ -70,7 +71,9 @@ class Body extends StatelessWidget {
             // view all
             SizedBox(height: getProportionateScreenWidth(10)),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, DealerScreen.routeName);
+              },
               child: Text(
                 "View All",
                 style: subHeading.copyWith(color: const Color(0xFFB5BDC9)),

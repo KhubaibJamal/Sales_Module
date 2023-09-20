@@ -32,6 +32,7 @@ class MapSearchBar extends StatelessWidget {
 
   Future<dynamic> buildBottomSheet(BuildContext context) {
     return showModalBottomSheet(
+      isDismissible: false,
       isScrollControlled: true,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
@@ -116,6 +117,7 @@ class MapSearchBar extends StatelessWidget {
 
   Future<dynamic> dealerBottomSheet(BuildContext context) {
     return showModalBottomSheet(
+      isDismissible: false,
       backgroundColor: kScaffoldBgColor,
       isScrollControlled: true,
       context: context,

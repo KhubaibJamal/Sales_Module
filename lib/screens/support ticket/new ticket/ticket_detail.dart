@@ -88,11 +88,12 @@ class TicketDetails extends StatelessWidget {
 
 class TicketDetailContainer extends StatelessWidget {
   final Widget child;
-  final Color color;
+  final Color color, borderColor;
   const TicketDetailContainer({
     super.key,
     required this.color,
     required this.child,
+    this.borderColor = kGreyColor,
   });
 
   @override
@@ -105,7 +106,7 @@ class TicketDetailContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: kGreyColor, width: 1.5),
+        border: Border.all(color: borderColor, width: 1.5),
       ),
       child: child,
     );

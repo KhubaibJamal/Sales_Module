@@ -108,14 +108,20 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
 
         // submit button
         SizedBox(height: getProportionateScreenWidth(18)),
-        DefaultButton(
-          text: "Submit",
-          textColor: const Color(0xFFC6C6C6),
-          backgroundColor:
-              isRadioOneSelected || isRadioTwoSelected || isRadioThreeSelected
-                  ? kPrimaryColor
-                  : const Color(0xFFDFDFDF),
-          press: () {},
+        SizedBox(
+          width: SizeConfig.screenWidth! * 0.9,
+          height: 50,
+          child: DefaultButton(
+            text: "Submit",
+            textColor: const Color(0xFFC6C6C6),
+            backgroundColor: kPrimaryColor,
+            // backgroundColor:
+            //     isRadioOneSelected || isRadioTwoSelected || isRadioThreeSelected
+            //         ? kPrimaryColor
+            //         : const Color(0xFFDFDFDF),
+            press: () {},
+            borderRadius: 10,
+          ),
         ),
       ],
     );

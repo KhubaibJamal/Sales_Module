@@ -2,6 +2,8 @@ import 'package:agha_steel_sales_module/const.dart';
 import 'package:agha_steel_sales_module/size_config.dart';
 import 'package:flutter/material.dart';
 
+import '../../../component/text_box.dart';
+
 class DealerDropDown extends StatefulWidget {
   const DealerDropDown({super.key});
 
@@ -68,30 +70,11 @@ class _DealerDropDownState extends State<DealerDropDown> {
             }).toList(),
           ),
           SizedBox(height: getProportionateScreenWidth(15)),
-          const DealerContainer(text: "Phone Number"),
+          const TextBox(text: "Phone Number", color: Colors.white),
           SizedBox(height: getProportionateScreenWidth(15)),
-          const DealerContainer(text: "Gulistan-e-Johar"),
+          const TextBox(text: "Gulistan-e-Johar", color: Colors.white),
         ],
       ),
-    );
-  }
-}
-
-class DealerContainer extends StatelessWidget {
-  final String text;
-  const DealerContainer({super.key, required this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(getProportionateScreenWidth(15)),
-      width: SizeConfig.screenWidth! * 0.8,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: kGreyColor, width: 1.5),
-      ),
-      child: Text(text, style: greyTextStyle),
     );
   }
 }

@@ -62,7 +62,7 @@ class Chart extends StatelessWidget {
                   xValueMapper: (SalesData sales, _) => sales.month,
                   yValueMapper: (SalesData sales, _) => sales.sales,
                   pointColorMapper: (SalesData sales, _) => sales.color,
-                  width: 1,
+                  width: 0.5,
                 ),
               ],
             ),

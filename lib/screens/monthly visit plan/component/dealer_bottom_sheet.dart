@@ -1,3 +1,4 @@
+import 'package:agha_steel_sales_module/screens/dealer%20location/dealer_location_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -6,6 +7,7 @@ import '../../../component/dealer_time_box.dart';
 import '../../../component/icon_button.dart';
 import '../../../const.dart';
 import '../../../size_config.dart';
+import 'check_in_pop_up.dart';
 
 class DealerBottomSheet extends StatelessWidget {
   const DealerBottomSheet({super.key});
@@ -45,9 +47,14 @@ class DealerBottomSheet extends StatelessWidget {
 
                   // add another location
                   SizedBox(height: getProportionateScreenWidth(18)),
-                  const IconTextContainer(
+                  IconTextContainer(
                     text: "Add another location",
                     icon: 'assets/icons/current location.svg',
+                    press: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(
+                          context, DealerLocationScreen.routeName);
+                    },
                   ),
 
                   //check in to diff location
@@ -56,13 +63,15 @@ class DealerBottomSheet extends StatelessWidget {
 
                   // check in and out
                   SizedBox(height: getProportionateScreenWidth(18)),
-                  const IconTextContainer(
+                  IconTextContainer(
                     text: "Check-In",
                     icon: 'assets/icons/check in icon.svg',
+                    press: () {},
                   ),
-                  const IconTextContainer(
+                  IconTextContainer(
                     text: "Check-Out",
                     icon: 'assets/icons/check out icon.svg',
+                    press: () {},
                   ),
                 ],
               ),
@@ -81,17 +90,28 @@ class CheckInText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: SizeConfig.screenWidth!,
-      padding: EdgeInsets.all(getProportionateScreenWidth(10)),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Text(
-        "Check-in to different location",
-        style: subHeading.copyWith(
-          color: kPrimaryColor,
+    return GestureDetector(
+      onTap: () {
+        // show dialog box
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return const CheckInPopUp();
+          },
+        );
+      },
+      child: Container(
+        width: SizeConfig.screenWidth!,
+        padding: EdgeInsets.all(getProportionateScreenWidth(10)),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Text(
+          "Check-in to different location",
+          style: subHeading.copyWith(
+            color: kPrimaryColor,
+          ),
         ),
       ),
     );
@@ -100,30 +120,35 @@ class CheckInText extends StatelessWidget {
 
 class IconTextContainer extends StatelessWidget {
   final String text, icon;
+  final VoidCallback press;
   const IconTextContainer({
     super.key,
     required this.text,
     required this.icon,
+    required this.press,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(getProportionateScreenWidth(10)),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Row(
-        children: [
-          SvgPicture.asset(icon),
-          Text(
-            text,
-            style: subHeading.copyWith(
-              color: kPrimaryColor,
+    return GestureDetector(
+      onTap: press,
+      child: Container(
+        padding: EdgeInsets.all(getProportionateScreenWidth(10)),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Row(
+          children: [
+            SvgPicture.asset(icon),
+            Text(
+              text,
+              style: subHeading.copyWith(
+                color: kPrimaryColor,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

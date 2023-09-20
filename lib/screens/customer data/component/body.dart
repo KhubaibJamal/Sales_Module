@@ -42,13 +42,13 @@ class Body extends StatelessWidget {
 
               // dealer date and time
               SizedBox(height: getProportionateScreenWidth(20)),
-              const DealerTimeBox(color: Color(0xFFBDBDBD)),
+              const DealerTimeBox(color: Color(0xFFEBEBEB)),
 
               // dealer details
               SizedBox(height: getProportionateScreenWidth(20)),
               Text("Details", style: subHeading),
               SizedBox(height: getProportionateScreenWidth(12)),
-              const DealerDetails(color: Color(0xFFBDBDBD)),
+              const DealerDetails(color: Color(0xFFEBEBEB)),
 
               // customer location
               SizedBox(height: getProportionateScreenWidth(20)),

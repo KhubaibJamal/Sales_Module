@@ -68,6 +68,7 @@ class RecoveryPopUp extends StatelessWidget {
               press: () {
                 Navigator.pop(context);
               },
+              borderRadius: 10,
             ),
           ),
           SizedBox(height: getProportionateScreenWidth(5)),

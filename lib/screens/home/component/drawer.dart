@@ -2,6 +2,7 @@ import 'package:agha_steel_sales_module/screens/customer%20summary/customer_summ
 import 'package:agha_steel_sales_module/screens/kpi/kpi_screen.dart';
 import 'package:agha_steel_sales_module/screens/monthly%20visit%20plan/monthly_visit_plan_screen.dart';
 import 'package:agha_steel_sales_module/screens/remaining%20order/remaining_order_screen.dart';
+import 'package:agha_steel_sales_module/screens/report/report_dialog_box.dart';
 import 'package:agha_steel_sales_module/screens/visit%20history/visit_history_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -140,10 +141,11 @@ class HomeDrawer extends StatelessWidget {
                 ListTile(
                   onTap: () {
                     showDialog(
-                        context: context,
-                        builder: (context) {
-                          return reportDialogBox(context);
-                        });
+                      context: context,
+                      builder: (context) {
+                        return const ReportDialogBox();
+                      },
+                    );
                   },
                   title: Text(
                     "Report",
@@ -188,63 +190,6 @@ class HomeDrawer extends StatelessWidget {
                 SizedBox(height: getProportionateScreenWidth(20))
               ],
             ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  AlertDialog reportDialogBox(BuildContext context) {
-    return AlertDialog(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-        side: const BorderSide(
-          color: kPrimaryColor,
-          width: 1.5,
-        ),
-      ),
-      title: Row(
-        children: [
-          SvgPicture.asset('assets/icons/report2  icon.svg'),
-          const SizedBox(width: 10),
-          Text("Report", style: subHeading),
-          const Spacer(),
-          IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.close),
-          ),
-        ],
-      ),
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Container(
-            padding: EdgeInsets.all(getProportionateScreenWidth(15)),
-            height: SizeConfig.screenHeight! / 3.5,
-            width: SizeConfig.screenWidth! * 0.9,
-            decoration: BoxDecoration(
-              color: const Color(0xFFFFFFFF),
-              border: Border.all(width: 1.5, color: kGreyColor),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: TextField(
-              maxLines: 3,
-              style: subHeading.copyWith(
-                  fontSize: getProportionateScreenWidth(17)),
-              decoration: const InputDecoration(
-                hintText: "Add your concerns",
-                border: InputBorder.none,
-              ),
-            ),
-          ),
-          const SizedBox(height: 10),
-          DefaultButton(
-            text: "Submit",
-            textColor: Colors.white,
-            backgroundColor: kPrimaryColor,
-            press: () {},
           ),
         ],
       ),

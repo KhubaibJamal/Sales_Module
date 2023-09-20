@@ -1,3 +1,4 @@
+import 'package:agha_steel_sales_module/screens/dealer%20location/dealer_location_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -32,7 +33,7 @@ class DealerDetails extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  // navigate to dealer location
+                  Navigator.pushNamed(context, DealerLocationScreen.routeName);
                 },
                 child: Container(
                   width: 50,
