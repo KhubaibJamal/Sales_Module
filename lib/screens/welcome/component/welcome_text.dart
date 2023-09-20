@@ -9,19 +9,16 @@ class WelcomeText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      top: getProportionateScreenWidth(100),
-      child: Padding(
-        padding:
-            EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(18)),
-        child: Text(
-          "Welcome to",
-          style: TextStyle(
-            letterSpacing: getProportionateScreenWidth(3),
-            fontSize: getProportionateScreenWidth(40),
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
+    return Padding(
+      padding:
+          EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(18)),
+      child: Text(
+        "Welcome to",
+        style: TextStyle(
+          letterSpacing: getProportionateScreenWidth(3),
+          fontSize: getProportionateScreenWidth(40),
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
         ),
       ),
     );

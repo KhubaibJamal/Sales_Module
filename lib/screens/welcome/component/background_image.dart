@@ -7,10 +7,10 @@ class BackgroundImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Opacity(
+    return Opacity(
       opacity: 0.8,
-      child: Image(
-        image: AssetImage("assets/images/login bg.png"),
+      child: Image.asset(
+        "assets/images/login bg.png",
         fit: BoxFit.fill,
       ),
     );

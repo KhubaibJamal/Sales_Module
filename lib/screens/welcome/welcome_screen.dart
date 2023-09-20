@@ -9,8 +9,31 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return const Scaffold(
-      body: Body(),
+    return Stack(
+      clipBehavior: Clip.antiAlias,
+      fit: StackFit.expand,
+      children: [
+        // Image.asset(
+        //   "assets/images/login bg.png",
+        //   fit: BoxFit.fill,
+        // ),
+        // const BackgroundImage(),
+        Opacity(
+          opacity: 0.9,
+          child: Image.asset(
+            "assets/images/login bg.png",
+            fit: BoxFit.fill,
+          ),
+        ),
+        Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0.0,
+          ),
+          body: const Body(),
+        )
+      ],
     );
   }
 }
