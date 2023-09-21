@@ -1,5 +1,6 @@
 import 'package:agha_steel_sales_module/const.dart';
 import 'package:agha_steel_sales_module/screens/monthly%20visit%20plan/component/dealer_bottom_sheet.dart';
+import 'package:agha_steel_sales_module/screens/monthly%20visit%20plan/component/unplanned%20bottom%20sheet/unplanned_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 import '../../../size_config.dart';
@@ -60,8 +61,13 @@ class MapSearchBar extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("Visit of Sales", style: greyTextStyle),
-                      Text("Unplanned Visit",
-                          style: subHeading.copyWith(color: kPrimaryColor)),
+                      GestureDetector(
+                        onTap: () {
+                          unPlannedBottomSheet(context);
+                        },
+                        child: Text("Unplanned Visit",
+                            style: subHeading.copyWith(color: kPrimaryColor)),
+                      ),
                     ],
                   ),
                   SizedBox(height: getProportionateScreenWidth(12)),
@@ -111,6 +117,18 @@ class MapSearchBar extends StatelessWidget {
             ),
           ),
         );
+      },
+    );
+  }
+
+  Future<dynamic> unPlannedBottomSheet(BuildContext context) {
+    return showModalBottomSheet(
+      isDismissible: false,
+      backgroundColor: kScaffoldBgColor,
+      isScrollControlled: true,
+      context: context,
+      builder: (BuildContext context) {
+        return const UnPlannedBottomSheet();
       },
     );
   }

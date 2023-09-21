@@ -10,14 +10,9 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Stack(
-      clipBehavior: Clip.antiAlias,
+      // clipBehavior: Clip.antiAlias,
       fit: StackFit.expand,
       children: [
-        // Image.asset(
-        //   "assets/images/login bg.png",
-        //   fit: BoxFit.fill,
-        // ),
-        // const BackgroundImage(),
         Opacity(
           opacity: 0.9,
           child: Image.asset(
